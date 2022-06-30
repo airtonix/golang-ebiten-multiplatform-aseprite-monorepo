@@ -6,18 +6,18 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/airtonix/golang-ebiten-aesprite-mobile/pkg/game/assets"
+	"github.com/airtonix/golang-ebiten-aseprite-mobile/pkg/game/assets"
 	"golang.org/x/exp/maps"
 )
 
 var (
-	sprites = map[string]Aesprite{}
+	sprites = map[string]Aseprite{}
 )
 
-func LoadAesprites() error {
+func LoadAseprites() error {
 	const dir = "images"
 
-	fmt.Println(fmt.Sprintf("📂 Loading aesprites from: %s", dir))
+	fmt.Println(fmt.Sprintf("📂 Loading aseprites from: %s", dir))
 
 	ents, err := assets.Assets.ReadDir(dir)
 	if err != nil {
@@ -36,17 +36,17 @@ func LoadAesprites() error {
 			continue
 		}
 
-		sprites[basename] = NewAesprite(filepath)
+		sprites[basename] = NewAseprite(filepath)
 
 	}
-	fmt.Println(fmt.Sprintf("Stored %d aesprites: %s",
+	fmt.Println(fmt.Sprintf("Stored %d aseprites: %s",
 		len(sprites),
 		strings.Join(maps.Keys(sprites), ","),
 	))
 	return nil
 }
 
-func GetSprite(name string) Aesprite {
+func GetSprite(name string) Aseprite {
 	fmt.Println(fmt.Sprintf("👀 looking for sprite named %s", name))
 	sprite, hasSprite := sprites[name]
 

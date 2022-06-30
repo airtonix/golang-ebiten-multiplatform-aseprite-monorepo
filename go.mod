@@ -1,4 +1,4 @@
-module github.com/airtonix/golang-ebiten-aesprite-mobile
+module github.com/airtonix/golang-ebiten-aseprite-mobile
 
 go 1.18
 

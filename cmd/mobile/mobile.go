@@ -4,7 +4,7 @@
 package mobile
 
 import (
-	"github.com/airtonix/golang-ebiten-aesprite-mobile/pkg/game"
+	"github.com/airtonix/golang-ebiten-aseprite-mobile/pkg/game"
 	"github.com/hajimehoshi/ebiten/v2/mobile"
 )
 

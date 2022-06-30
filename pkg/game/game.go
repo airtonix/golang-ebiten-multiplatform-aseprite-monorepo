@@ -4,18 +4,18 @@ import (
 	"fmt"
 	"image"
 
-	"github.com/airtonix/golang-ebiten-aesprite-mobile/pkg/game/core"
+	"github.com/airtonix/golang-ebiten-aseprite-mobile/pkg/game/core"
 	"github.com/hajimehoshi/ebiten/v2"
 
 	_ "image/png"
 )
 
 type Game struct {
-	Figure core.Aesprite
+	Figure core.Aseprite
 }
 
 func NewGame() *Game {
-	core.LoadAesprites()
+	core.LoadAseprites()
 	fmt.Println("Loading figure")
 	sprite := core.GetSprite("16x16Deliveryman")
 	fmt.Println("Figure Loaded")
